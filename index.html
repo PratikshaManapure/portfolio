@@ -10,7 +10,7 @@
 <body>
     <div class="main-body">
         <!-- Navbar -->
-        <div class="nav">
+        <!-- <div class="nav">
             <div>
                 <h2>Manapure <span style="color: #f96b24;">Pratiksha</span></h2>
             </div>
@@ -24,7 +24,40 @@
             <div>
                 <button type="button" class="btn">Contact Me</button>
             </div>
+        </div> -->
+        <!-- <nav class="navbar">
+            <div class="navbar-brand"><span style="color: #f96b24;">Pratiksha</span> Manapure</div>
+            <button class="navbar-toggler" onclick="toggleMenu()" style="color: black;">☰</button>
+            <ul class="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav> -->
+
+        <nav class="navbar">
+            <div class="navbar-brand"><span style="color: #f96b24;font-weight: bold;">Pratiksha </span>Manapure</div>
+            <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+            <ul class="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="navbar-overlay" id="navbarOverlay">
+            <span class="navbar-close" onclick="closeMenu()">✖</span>
+            <ul class="navbar-overlay-menu">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            </ul>
         </div>
+
+
         <!-- Home container -->
         <div class="container">
             <div class="sub-container1 ">
@@ -100,36 +133,37 @@
         </div>
         <!-- Service container -->
         <div class="Sc">
-        <div class="Service-container" id="service">
-            <h1 class="subheading">Services</h1>
-            <h1 class="heading">What I Do</h1>
-            <div class="sc">
-                <div class="service-con">
-                    <img src="./img/web-designing.png" height="70px" />
-                    <p class="subtitle">Web Design</p>
-                    <p style="color: #797d85;">
-                        Loved to design for my own websites. I loved to design a website in a way that it offers a good
-                        user experience.
-                    </p>
-                </div>
-                <div class="service-con">
-                    <img src="./img/coding.png" height="60px" />
-                    <p class="subtitle">Programming</p>
-                    <p style="color: #797d85;">
-                        I loved to do Programming, and always trying to enhance my programming skills as well.
-                    </p>
-                </div>
-                <div class="service-con">
-                    <img src="./img/api.png" height="65px" />
-                    <p class="subtitle">Web Development</p>
-                    <p style="color: #797d85;">
-                        I am facinated by the world of Web Development, and trying to enhance my skills by doing the
-                        same.
-                    </p>
+            <div class="Service-container" id="service">
+                <h1 class="subheading">Services</h1>
+                <h1 class="heading">What I Do</h1>
+                <div class="sc">
+                    <div class="service-con">
+                        <img src="./img/web-designing.png" height="70px" />
+                        <p class="subtitle">Web Design</p>
+                        <p style="color: #797d85;">
+                            Loved to design for my own websites. I loved to design a website in a way that it offers a
+                            good
+                            user experience.
+                        </p>
+                    </div>
+                    <div class="service-con">
+                        <img src="./img/coding.png" height="60px" />
+                        <p class="subtitle">Programming</p>
+                        <p style="color: #797d85;">
+                            I loved to do Programming, and always trying to enhance my programming skills as well.
+                        </p>
+                    </div>
+                    <div class="service-con">
+                        <img src="./img/api.png" height="65px" />
+                        <p class="subtitle">Web Development</p>
+                        <p style="color: #797d85;">
+                            I am facinated by the world of Web Development, and trying to enhance my skills by doing the
+                            same.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
         <!-- Projects -->
         <div id="projects">
             <h1 style="color:#ff7733;text-align: center;font-size: 20px;">Portfolio</h1>
@@ -226,7 +260,7 @@
                     <input type="text" placeholder="👤 Name" class="input" />
                     <input type="email" placeholder="✉️ Email" class="input" />
                     <input type="text" placeholder="❔ Subject" class="input input1" />
-                    <textarea placeholder="📄 Message" class="input" ></textarea>
+                    <textarea placeholder="📄 Message" class="input"></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </div>
@@ -234,14 +268,14 @@
         <!-- Footer -->
         <div class="footer">
             <div style="padding: 40px;">
-                <p style="color: #797d85;">pratikshamanapure@gmail.com</p>
+                <p style="color: #797d85;">Created by pratikshamanapure@gmail.com</p>
             </div>
 
             <div class="link-container f-link">
                 <a href="https://www.linkedin.com/feed/"><img src="./img/linkedin.png" height="40" /></a>
                 <a href="https://www.instagram.com/pratiksha.manapure"><img src="./img/instagram.png" height="45" /></a>
                 <a href="https://github.com/PratikshaManapure"><img src="./img/github .png" height="40" /></a>
-            </div>
+            </div> 
         </div>
     </div>
 
@@ -255,6 +289,17 @@
                 bar.style.width = skillLevel;
             });
         });
+
+        function toggleMenu() {
+            var overlay = document.getElementById('navbarOverlay');
+            overlay.classList.toggle('show');
+        }
+
+        function closeMenu() {
+            var overlay = document.getElementById('navbarOverlay');
+            overlay.classList.remove('show');
+        }
+
 
     </script>
 </body>
